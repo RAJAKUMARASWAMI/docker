@@ -4,8 +4,7 @@ LABEL company="cotton"
 RUN yum update  
 RUN yum install maven openjdk-17-jdk git -y
 RUN  git clone https://github.com/spring-projects/spring-petclinic.git
-RUN cd spring-petclinic
-WORKDIR /spring-petclinic 
-RUN mvnw package
+RUN cd spring-petclinic 
+RUN ./spring-petclinic/mvn package
 CMD ["java" "-jar" "spring-petclinic-3.2.0-SNAPSHOT.jar"]
 EXPOSE 8080/tcp
