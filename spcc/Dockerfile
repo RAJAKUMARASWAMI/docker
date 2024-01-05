@@ -1,0 +1,1 @@
+FROM amazoncoretto:11
