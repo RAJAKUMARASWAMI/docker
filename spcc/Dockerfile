@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:22.04
 RUN apt update  
 RUN apt install maven openjdk-17-jdk git -y
 RUN  git clone https://github.com/spring-projects/spring-petclinic.git
