@@ -2,7 +2,7 @@ FROM amazoncorretto:11
 LABEL owner="raj"
 LABEL company="cotton"
 RUN sudo apt update && sudo apt install maven openjdk-17-jdk -y
-ADD  git clone https://github.com/spring-projects/spring-petclinic.git /home/ubuntu
+RUN  git clone https://github.com/spring-projects/spring-petclinic.git /home/ubuntu
 RUN cd /home/ubuntu/spring-petclinic
 CMD ["mvn" "package"]
 RUN cd /home/ubuntu/spring-petclinic/target
