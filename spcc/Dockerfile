@@ -5,5 +5,5 @@ RUN  git clone https://github.com/spring-projects/spring-petclinic.git
 WORKDIR spring-petclinic
 RUN mvn package
 WORKDIR /srv/spring-petclinic/target
-#EXPOSE 8080/tcp
-#CMD ["java" "-jar" "spring-petclinic-3.2.0-SNAPSHOT.jar"]
+EXPOSE 8080/tcp
+CMD ["java" "-jar" "spring-petclinic-3.2.0-SNAPSHOT.jar"]
